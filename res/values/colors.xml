@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="primary_bar_background">#cf6594</color>
+    <color name="primary_bar_text">#ffffff</color>
+    <color name="secondary_bar_background">#f06eaa</color>
+    <color name="secondary_bar_text">#ffffff</color>
+    <color name="secondary_button_background">#e1e1e1</color>
+    <color name="secondary_button_text">#959595</color>
+
+</resources>
