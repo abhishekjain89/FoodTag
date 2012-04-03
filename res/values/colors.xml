@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="black">#000000</drawable>
+
     <color name="main_text_color">#000</color>
     <color name="transparent">#00000000</color>
     <color name="primary_bar_background">#cf6594</color>
