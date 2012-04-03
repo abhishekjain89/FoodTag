@@ -64,16 +64,16 @@ public class AndroCamera extends Activity {
 		setContentView(R.layout.take_picture);
 		imageView = (ImageView) findViewById(R.id.img);
 		editText = (EditText) findViewById(R.id.editText1);
-		shareButton = (EditText) findViewById(R.id.share);
+		shareButton = (Button) findViewById(R.id.share);
 
 		imageView.requestFocus();
-
+		checkShareStatus();
 		imageView.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 
 				imageView.setAlpha(128);
 				takePictureOption();
-				
+				imageView.setAlpha(255);
 
 			}
 		});
@@ -105,7 +105,10 @@ public class AndroCamera extends Activity {
 	public void checkShareStatus(){
 		message = editText.getText().toString();
     	if(message.length()>0 && photo!=null){
-    		System.out.println("YES");
+    		shareButton.setVisibility(View.VISIBLE);
+    	}
+    	else{
+    		shareButton.setVisibility(View.GONE);
     	}
     	
 		
@@ -197,7 +200,7 @@ public class AndroCamera extends Activity {
 		});
 		AlertDialog alert = builder.create();
 		alert.show();
-		imageView.setAlpha(255);
+		
 	}
 
 

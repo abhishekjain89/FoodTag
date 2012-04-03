@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="fill here"
+                android:text=""
                 android:inputType="textPersonName" >
 
                 <requestFocus />
@@ -107,8 +107,8 @@
                 android:layout_marginLeft="70dp"
                 android:layout_marginRight="70dp"
                 android:layout_marginTop="20dp"
-                android:visibility="gone"
-                android:text="Back"
+                android:background="@drawable/share_layout"
+                android:text="Share"
                 android:textColor="#000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
