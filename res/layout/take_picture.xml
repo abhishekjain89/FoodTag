@@ -27,51 +27,92 @@
                 android:layout_height="fill_parent"
                 android:layout_marginRight="42dp"
                 android:gravity="center_horizontal"
-                android:text="New"
+                android:text="MyThings"
                 android:textColor="@color/primary_bar_text"
                 android:textSize="30dp" />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="30dp"
-            android:background="@color/secondary_bar_background"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center_vertical"
-                android:text="Picture"
-                android:textColor="@color/secondary_bar_text"
-                android:textSize="25dp" />
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="240dp"
-            android:layout_height="160dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/take_pic" >
-        </ImageView>
+           >
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:minHeight="200dp"
+                android:maxHeight="300dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/take_pic" />
+
+            <ProgressBar
+                android:id="@+id/wait"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="30dp"
-            android:background="@color/secondary_bar_background"
-            android:orientation="horizontal" >
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/pink_layout"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" >
 
             <TextView
-                android:layout_width="fill_parent"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:gravity="center_vertical"
-                android:text="Details"
-                android:textColor="@color/secondary_bar_text"
-                android:textSize="25dp" />
+                android:gravity="center"
+                android:text="This is my "
+                android:textColor="@color/primary_bar_text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="fill here"
+                android:inputType="textPersonName" >
+
+                <requestFocus />
+            </EditText>
         </LinearLayout>
+        
+            
+            <Button
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:text="Back"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
     </LinearLayout>
+    
 
 </ScrollView>
